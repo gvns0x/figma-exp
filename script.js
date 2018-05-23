@@ -14,6 +14,7 @@ $.ajax({
     beforeSend: function (request) {
         request.setRequestHeader("X-FIGMA-TOKEN", "1303-43c30425-aa53-427b-a2d1-fcf8ac80fbd1");
     },
+    async: false,
     dataType: "json",
     url: "https://api.figma.com/v1/files/aV2lZRMuhz2BaVcF0cyWku2K",
     success: function (data) {
@@ -34,12 +35,14 @@ $.ajax({
                 /* get its ID in frameID */
                 frameID = pageContent[i]["id"];
                 console.log(frameID);
+                console.log("yo")
 
                 /* - and print the image of that frame */
                 $.ajax({
                     beforeSend: function (request) {
                         request.setRequestHeader("X-FIGMA-TOKEN", "1329-8c621800-6d71-4682-8017-fb77055cd0df");
                     },
+                    async: false,
                     dataType: "json",
                     url: "https://api.figma.com/v1/images/aV2lZRMuhz2BaVcF0cyWku2K?ids=" + frameID,
 
