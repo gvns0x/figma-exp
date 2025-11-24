@@ -1,0 +1,11 @@
+:root {
+    /* Button colors */
+    --button-accent-background: #1f7aed;
+    --button-accent-text: #ffffff;
+}
+
+.btn-accent {
+    background-color: var(--button-accent-background);
+    color: var(--button-accent-text);
+    border: none;
+}
